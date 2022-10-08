@@ -1,4 +1,4 @@
-﻿namespace WebApplicationSerilog;
+﻿namespace WebApplicationSerilog.ExceptionMiddleware;
 
 using Microsoft.AspNetCore.Diagnostics;
 using Serilog;

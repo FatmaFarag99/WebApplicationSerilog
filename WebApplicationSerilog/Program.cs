@@ -1,5 +1,5 @@
 using Serilog;
-using WebApplicationSerilog;
+using WebApplicationSerilog.ExceptionMiddleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -88,6 +88,7 @@ if (app.Environment.IsDevelopment())
 //    next();
 //});
 
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 
